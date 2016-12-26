@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Spring & Velocity</title>
+</head>
+<body>
+
+<div>
+
+    <!-- View abc.vm is inserted here -->
+    <!-- Noi dung View abc.vm se duoc tren tai day -->
+    ${screen_content}
+
+</div>
+
+</body>
+</html>
