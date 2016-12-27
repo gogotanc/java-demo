@@ -1,16 +1,10 @@
 <html>
-<head>
-    <title>Spring & Velocity</title>
-</head>
-<body>
-
-<div>
-
-    <!-- View abc.vm is inserted here -->
-    <!-- Noi dung View abc.vm se duoc tren tai day -->
-    ${screen_content}
-
-</div>
-
-</body>
+    #parse("/WEB-INF/layout/header.vm")
+    <body>
+        <div>
+            <!-- View abc.vm is inserted here -->
+            ${screen_content}
+        </div>
+        #parse("/WEB-INF/layout/footer.vm")
+    </body>
 </html>
