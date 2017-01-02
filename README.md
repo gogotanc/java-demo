@@ -6,3 +6,5 @@
 - command : 使用 java 执行 shell 以及 dos 命令的示例。
 
 - velocity : SpringMVC 整合 velocity 的示例。
+
+- springboot : 使用 Spring-boot 创建 web 项目示例
