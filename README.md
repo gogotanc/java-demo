@@ -36,6 +36,10 @@
 
   > 使用 Spring-boot 创建 web 项目示例
 
+- thread
+
+  > 并发相关 demo
+
 - velocity
 
   > SpringMVC 整合 velocity 的示例。
