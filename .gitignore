@@ -14,3 +14,7 @@ hs_err_pid*
 # intellij
 */.idea/
 */*.iml
+
+.idea/
+java-demo.iml
+target/
