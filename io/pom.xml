@@ -8,17 +8,12 @@
     <packaging>jar</packaging>
 
     <name>tanc-io-demo</name>
-    <url>http://maven.apache.org</url>
 
     <parent>
         <groupId>org.demo</groupId>
         <artifactId>tanc-java-demo</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${configure.maven.version}</version>
     </parent>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>

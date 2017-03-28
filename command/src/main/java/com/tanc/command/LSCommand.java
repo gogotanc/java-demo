@@ -22,7 +22,7 @@ public class LSCommand {
             String content;
 
             while ((content = reader.readLine()) != null) {
-                System.out.println(content);
+
             }
         } catch (IOException e) {
             e.printStackTrace();

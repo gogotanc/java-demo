@@ -13,12 +13,8 @@
   <parent>
     <groupId>org.demo</groupId>
     <artifactId>tanc-java-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${configure.maven.version}</version>
   </parent>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
   <dependencies>
 
@@ -39,13 +35,6 @@
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
     </dependency>
-
-    <!--&lt;!&ndash; https://mvnrepository.com/artifact/ch.qos.logback/logback-access &ndash;&gt;-->
-    <!--&lt;!&ndash; HTTP-access logs with logback-access, Jetty and Tomcat &ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>ch.qos.logback</groupId>-->
-      <!--<artifactId>logback-access</artifactId>-->
-    <!--</dependency>-->
 
     <dependency>
       <groupId>junit</groupId>
