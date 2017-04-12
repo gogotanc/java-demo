@@ -11,12 +11,18 @@ import java.lang.reflect.Modifier;
  */
 public class ShowClass {
 
+    /**
+     * 打印一个对象的类信息
+     */
     public static void printAllMessage(Object o) {
         printFieldMessage(o);
         printConstructorMessage(o);
         printMethodMessage(o);
     }
 
+    /**
+     * 打印一个类的域信息
+     */
     public static void printFieldMessage(Object o){
         Class cls = o.getClass();
         StringBuilder buffer = new StringBuilder();
@@ -27,6 +33,9 @@ public class ShowClass {
         System.out.println(buffer.toString());
     }
 
+    /**
+     * 打印一个类的构造方法信息
+     */
     public static void printConstructorMessage(Object o) {
         Class cls = o.getClass();
         StringBuilder buffer = new StringBuilder();
@@ -45,6 +54,9 @@ public class ShowClass {
         System.out.println(buffer.toString());
     }
 
+    /**
+     * 打印一个类的方法信息
+     */
     public static void printMethodMessage(Object o) {
         Class cls = o.getClass();
         StringBuilder buffer = new StringBuilder();
