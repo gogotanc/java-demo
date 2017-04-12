@@ -1,8 +1,7 @@
 package org.tanc.proxy;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.tanc.proxy.staticway.CarTimeTrace2;
 
 /**
  * 测试使用聚合实现的代理
@@ -14,8 +13,10 @@ public class CombineProxyTest {
     public void case1() throws Exception {
         Car car = new Car();
         car.move();
+        car.run();
         CarTimeTrace2 proxy = new CarTimeTrace2(car);
         proxy.move();
+        proxy.run();
     }
 
 }

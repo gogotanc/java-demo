@@ -1,4 +1,6 @@
-package org.tanc.proxy;
+package org.tanc.proxy.staticway;
+
+import org.tanc.proxy.Car;
 
 /**
  * 小汽车代理类，添加计时功能，使用继承实现。

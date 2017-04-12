@@ -7,4 +7,6 @@ package org.tanc.proxy;
 public interface Movable {
 
     void move();
+
+    void run();
 }

@@ -1,4 +1,7 @@
-package org.tanc.proxy;
+package org.tanc.proxy.staticway;
+
+import org.tanc.proxy.Car;
+import org.tanc.proxy.Movable;
 
 /**
  * 小汽车代理类，添加计时功能，使用聚合实现。
@@ -24,6 +27,15 @@ public class CarTimeTrace2 implements Movable {
         long start = System.currentTimeMillis();
         System.out.println("汽车开始运行，启动计时程序。");
         car.move();
+        long end = System.currentTimeMillis();
+        System.out.println("汽车运行结束，运行时间为：" + (end - start) + "毫秒。");
+    }
+
+    @Override
+    public void run() {
+        long start = System.currentTimeMillis();
+        System.out.println("汽车开始运行，启动计时程序。");
+        car.run();
         long end = System.currentTimeMillis();
         System.out.println("汽车运行结束，运行时间为：" + (end - start) + "毫秒。");
     }
