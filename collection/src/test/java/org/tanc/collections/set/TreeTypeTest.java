@@ -25,9 +25,7 @@ public class TreeTypeTest {
         set.add(new TreeType(2));
         set.add(new TreeType(4));
 
-        for (TreeType treeType : set) {
-            System.out.println(treeType.value());
-        }
+        set.forEach(e -> System.out.println(e.value()));
     }
 
     @Test
@@ -40,9 +38,7 @@ public class TreeTypeTest {
         set.add(new TreeType(2));
         set.add(new TreeType(4));
 
-        for (TreeType treeType : set) {
-            System.out.println(treeType.value());
-        }
+        set.forEach(e -> System.out.println(e.value()));
 
         Comparator comparator = set.comparator();
         if (null != comparator) {
@@ -58,9 +54,7 @@ public class TreeTypeTest {
         set.add(new TreeType(2));
         set.add(new TreeType(1));
 
-        for (TreeType treeType : set) {
-            System.out.println(treeType.value());
-        }
+        set.forEach(e -> System.out.println(e.value()));
     }
 
     @Test
@@ -71,8 +65,6 @@ public class TreeTypeTest {
         set.add(new NormalType(2));
         set.add(new NormalType(1));
 
-        for (NormalType treeType : set) {
-            System.out.println(treeType.value());
-        }
+        set.forEach(e -> System.out.println(e.value()));
     }
 }

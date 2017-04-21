@@ -2,6 +2,8 @@ package org.tanc.collections;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * 队列测试
  * Created by tanc on 17-4-18.

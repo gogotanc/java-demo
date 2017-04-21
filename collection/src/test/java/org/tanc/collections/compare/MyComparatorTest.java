@@ -22,9 +22,7 @@ public class MyComparatorTest {
         set.add(new MyData(2));
         set.add(new MyData(1));
 
-        for (MyData data : set) {
-            System.out.print(data.value() + ",");
-        }
+        set.forEach(e -> System.out.print(e.value() + ","));
     }
 
     @Test
