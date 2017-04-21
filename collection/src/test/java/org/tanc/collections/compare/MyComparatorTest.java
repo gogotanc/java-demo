@@ -3,6 +3,8 @@ package org.tanc.collections.compare;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.TreeSet;
 
 /**
@@ -35,4 +37,16 @@ public class MyComparatorTest {
         Assert.assertEquals(-1, result);
     }
 
+    @Test
+    public void case3() throws Exception {
+
+        MyData[] arr = {new MyData(1), new MyData(4), new MyData(3), new MyData(2)};
+
+        // 方法引用
+        Arrays.sort(arr, Comparator.comparing(MyData::value));
+
+        for (MyData data : arr) {
+            System.out.println(data.value());
+        }
+    }
 }
