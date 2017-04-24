@@ -1,7 +1,7 @@
 package org.tanc.concurrent.lock;
 
 /**
- *
+ * 线程 A
  * Created by tanc on 17-4-5.
  */
 public class MyThreadA implements Runnable {
