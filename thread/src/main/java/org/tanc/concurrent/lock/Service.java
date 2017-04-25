@@ -8,17 +8,20 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Service {
 
-    private ReentrantLock lock;
+    private MyLock lock;
+//    private ReentrantLock lock;
 
     public Service() {
-        lock = new ReentrantLock();
+        lock = new MyLock();
+//        lock = new ReentrantLock();
     }
 
     public void methodA() {
         lock.lock();
-        System.out.println("A running");
         try {
+            System.out.println("A running");
             Thread.sleep(3000);
+            System.out.println("A stop");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
@@ -28,13 +31,20 @@ public class Service {
 
     public void methodB() {
         lock.lock();
-        System.out.println("B running");
         try {
+            System.out.println("B running");
             Thread.sleep(3000);
+            System.out.println("B stop");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             lock.unlock();
         }
+    }
+
+    public static void main(String[] args) {
+        Service service = new Service();
+        new Thread(new MyThreadA(service), "thread a").start();
+        new Thread(new MyThreadB(service), "thread b").start();
     }
 }
