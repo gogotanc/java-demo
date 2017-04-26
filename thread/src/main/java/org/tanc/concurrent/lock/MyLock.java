@@ -11,8 +11,6 @@ import java.util.concurrent.locks.Lock;
  */
 public class MyLock implements Lock {
 
-    private Sync sync = new Sync();
-
     /**
      * 自定义同步器
      */
@@ -28,7 +26,8 @@ public class MyLock implements Lock {
         @Override
         protected boolean tryAcquire(int arg) {
 
-            if (compareAndSetState(0, 1)) {
+            // CAS 设置状态
+            if (compareAndSetState(0, arg)) {
                 setExclusiveOwnerThread(Thread.currentThread());
                 return true;
             }
@@ -50,14 +49,17 @@ public class MyLock implements Lock {
         }
     }
 
+    private final Sync sync = new Sync();
+
     @Override
     public void lock() {
-        sync.tryAcquire(1);
+        // acquire 是个 final 方法
+        sync.acquire(1);
     }
 
     @Override
     public boolean tryLock() {
-        return  sync.tryAcquire(1);
+        return sync.tryAcquire(1);
     }
 
     @Override
@@ -80,6 +82,4 @@ public class MyLock implements Lock {
         return sync.newCondition();
     }
 
-    public boolean isLocked()         { return sync.isHeldExclusively(); }
-    public boolean hasQueuedThreads() { return sync.hasQueuedThreads(); }
 }

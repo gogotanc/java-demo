@@ -1,19 +1,15 @@
 package org.tanc.concurrent.lock;
 
-import java.util.concurrent.locks.ReentrantLock;
-
 /**
  * 锁示例
  * Created by tanc on 17-4-5.
  */
 public class Service {
 
-    private MyLock lock;
-//    private ReentrantLock lock;
+    private final MyLock lock;
 
     public Service() {
         lock = new MyLock();
-//        lock = new ReentrantLock();
     }
 
     public void methodA() {
