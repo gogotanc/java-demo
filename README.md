@@ -44,3 +44,7 @@
 
   > SpringMVC 整合 velocity 的示例。
 
+## References
+
+- [Learning Java](http://chimera.labs.oreilly.com/books/1234000001805/index.html)
+
