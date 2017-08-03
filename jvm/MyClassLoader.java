@@ -54,6 +54,6 @@ public class MyClassLoader extends ClassLoader{
     public static void main(String[] args) throws Exception {
 
         ClassLoader classLoader = new MyClassLoader();
-        Class<?> clazz = Class.forName("App", true, classLoader);
+        Class.forName("App", true, classLoader);
     }
 }
