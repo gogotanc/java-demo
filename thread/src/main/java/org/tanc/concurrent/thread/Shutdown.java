@@ -27,7 +27,7 @@ public class Shutdown {
 
     static class SafeShutdown implements Runnable {
 
-        private boolean on = true;
+        private volatile boolean on = true;
 
         @Override
         public void run() {
