@@ -10,4 +10,8 @@
         <property name="userDao" ref="userDao"/>
     </bean>
 
+    <bean id="classA" class="org.tanc.spring.scope.ClassA"/>
+    <bean id="classB" class="org.tanc.spring.scope.ClassA" scope="prototype"/>
+    <bean id="classC" class="org.tanc.spring.scope.ClassC"/>
+
 </beans>
