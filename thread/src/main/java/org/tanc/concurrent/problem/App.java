@@ -9,8 +9,12 @@ public class App {
     public static void main(String[] args) {
 
 //        runDemoOne();
-        runDemoTwo();
+//        runDemoTwo();
+//        runDemoThree();
+        runDemoFour();
     }
+
+
 
     private static void runDemoTwo() {
         new PhiTwo(0).start();
@@ -26,5 +30,21 @@ public class App {
         new PhiOne(2).start();
         new PhiOne(3).start();
         new PhiOne(4).start();
+    }
+
+    public static void runDemoThree() {
+        new PhiThree(0).start();
+        new PhiThree(1).start();
+        new PhiThree(2).start();
+        new PhiThree(3).start();
+        new PhiThree(4).start();
+    }
+
+    public static void runDemoFour() {
+        new PhiFour(0).start();
+        new PhiFour(1).start();
+        new PhiFour(2).start();
+        new PhiFour(3).start();
+        new PhiFour(4).start();
     }
 }

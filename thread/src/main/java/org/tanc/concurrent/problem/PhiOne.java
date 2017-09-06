@@ -6,6 +6,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 哲学家实现一
  *
+ * 先获取左边的筷子，然后获取右边的筷子
+ *
  * 死锁版本
  *
  * Created by tanc on 2017/8/15.

@@ -8,6 +8,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 哲学家吃饭问题实现二
  *
+ * 每个哲学家先获取左边的筷子
+ * 然后去尝试右边的筷子，如果超时了还没获取到，需要释放左边的筷子
  *
  * Created by tanc on 2017/8/15.
  */
